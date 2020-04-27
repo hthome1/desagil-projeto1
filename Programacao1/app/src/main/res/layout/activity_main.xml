@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView android:id="@+id/text_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Ferrão:"/>
+
+    <TextView android:id="@+id/text_example2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="     "/>
+
+    <TextView android:id="@+id/text_example3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="1 - Bom dia!"/>
+
+    <TextView android:id="@+id/text_example4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="2 - Boa Tarde!"/>
+
+    <TextView android:id="@+id/text_example5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="3 - Boa noite!"/>
+
+    <TextView android:id="@+id/text_example6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="4 - Obrigado!"/>
+
+    <TextView android:id="@+id/text_example7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="5 - Preciso ir ao banheiro!"/>
+
+    <TextView android:id="@+id/text_example8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="6 - Estou com sede!"/>
+
+    <TextView android:id="@+id/text_example9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="7 - Estou com fome!"/>
+
+    <TextView android:id="@+id/text_example10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="8 - Estou com sono!"/>
+
+<!--    <EditText android:id="@+id/edit_example"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="10dp"-->
+<!--        android:hint="Exemplo de EditText"/>-->
+
+    <Button android:id="@+id/button_example1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Anterior"/>
+    <Button android:id="@+id/button_example2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Próxima"/>
+
+
+
+</LinearLayout>

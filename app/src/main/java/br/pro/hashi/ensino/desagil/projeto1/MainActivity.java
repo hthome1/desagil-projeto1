@@ -1,4 +1,4 @@
-package br.edu.insper.al.victoran.programacao1;
+package br.pro.hashi.ensino.desagil.projeto1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<String> listaFrases = new ArrayList<String>();
+
 
 
         TextView textExample = findViewById(R.id.text_example);
@@ -50,22 +51,23 @@ public class MainActivity extends AppCompatActivity {
 
         botao1.setOnClickListener((view) -> {
             this.contador -= 1;
+            if(contador <  0){
+                contador = 7;
+            }
             String content = listaFrases.get(this.contador);
-            textExample.setText("Ferrão: "+content);
+            textExample.setText("Ferrão: " + content);
+
         });
 
         botao2.setOnClickListener((view) -> {
             this.contador += 1;
-            if(this.contador<=8) {
-                String content = listaFrases.get(this.contador);
-                textExample.setText("Ferrão: " + content);
-
-            }
-
-            else{
-
+            if(this.contador==8) {
                 this.contador = 0;
             }
+            String content = listaFrases.get(this.contador);
+            textExample.setText("Ferrão: " + content);
+
+
         });
 
 

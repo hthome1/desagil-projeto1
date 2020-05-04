@@ -11,17 +11,35 @@ import java.util.LinkedList;
 public class Translator {
     private Node root;
     private HashMap<Character, Node> map;
+    private char[] chars;
 
 
     // Você deve mudar o recheio do construtor,
     // de acordo com os requisitos do projeto.
     public Translator() {
+        map = new HashMap<Character, Node>();
+        chars = new char[]{' ', 'e', 't', 'i', 'a', 'n', 'm', 's', 'u', 'r', 'w', 'd', 'k', 'g', 'o', 'h',
+                            'v', 'f', 'f', ' ', 'l', ' ', 'p', 'j', 'b', 'x', 'c', 'y', 'z', 'q', ' ', ' ',
+                            '5', '4', ' ', '3', ' ', ' ', ' ', '2', ' ', ' ', '+', ' ', ' ', ' ', ' ', '1',
+                            '6', '=', '/', ' ', ' ', ' ', ' ', ' ', '7', ' ', ' ', ' ', '8', ' ', '9', '0'};
+    }
+    public Node vecToTree(char[] array, Node raiz, Node parent, HashMap<Character,Node> map, int i){
+        if (i < array.length){
+            raiz = new Node(array[i]);
+            raiz.setParent(parent);
+            raiz.setLeft(vecToTree(array, raiz.getLeft(), raiz, this.map, 2 * i + 1));
+            raiz.setRight(vecToTree(array, raiz.getRight(), raiz, this.map, 2 * i + 2));
+
+            map.put(raiz.getValue(), raiz);
+        }
+        return raiz;
     }
 
 
     // Você deve mudar o recheio deste método,
     // de acordo com os requisitos do projeto.
     public char morseToChar(String code) {
+        
         return ' ';
     }
 

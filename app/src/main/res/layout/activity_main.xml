@@ -17,30 +17,40 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
-        android:layout_height="51dp"
+        android:layout_height="208dp"
         android:text="Mensagem:"
         android:textSize="25sp" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
-        android:layout_height="316dp"
-        android:text="  ->"
-        android:textSize="20sp" />
+        android:layout_height="109dp"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"/>
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="105dp"
+        android:layout_marginBottom="10dp"
         android:text=".    /    -"
-        android:textSize="30sp"
-        android:layout_marginBottom="20dp"/>
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/traduzir"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:text="TRADUZIR"
+        android:textSize="25sp"/>
 
     <Button
         android:id="@+id/button3"
         android:layout_width="194dp"
         android:layout_height="60dp"
+        android:layout_marginRight="220dp"
         android:text="Frases prontas"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
 </LinearLayout>

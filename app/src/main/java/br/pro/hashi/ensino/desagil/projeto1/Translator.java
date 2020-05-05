@@ -12,6 +12,7 @@ public class Translator {
     private Node root;
     private HashMap<Character, Node> map;
     private char[] chars;
+    private Node arvore;
 
 
     // Você deve mudar o recheio do construtor,
@@ -19,9 +20,10 @@ public class Translator {
     public Translator() {
         map = new HashMap<Character, Node>();
         chars = new char[]{' ', 'e', 't', 'i', 'a', 'n', 'm', 's', 'u', 'r', 'w', 'd', 'k', 'g', 'o', 'h',
-                            'v', 'f', 'f', ' ', 'l', ' ', 'p', 'j', 'b', 'x', 'c', 'y', 'z', 'q', ' ', ' ',
+                            'v', 'f',' ', 'l', ' ', 'p', 'j', 'b', 'x', 'c', 'y', 'z', 'q', ' ', ' ',
                             '5', '4', ' ', '3', ' ', ' ', ' ', '2', ' ', ' ', '+', ' ', ' ', ' ', ' ', '1',
                             '6', '=', '/', ' ', ' ', ' ', ' ', ' ', '7', ' ', ' ', ' ', '8', ' ', '9', '0'};
+        arvore = vecToTree(chars,root,null,map,0);
     }
     public Node vecToTree(char[] array, Node raiz, Node parent, HashMap<Character,Node> map, int i){
         if (i < array.length){
@@ -34,13 +36,18 @@ public class Translator {
         }
         return raiz;
     }
+    
 
 
-    // Você deve mudar o recheio deste método,
-    // de acordo com os requisitos do projeto.
     public char morseToChar(String code) {
-        
-        return ' ';
+        for(char c : code.toCharArray()) {
+            if (c == '.'){
+                arvore = arvore.getLeft();
+            }else{
+                arvore = arvore.getRight();
+            }
+        }
+        return arvore.getValue();
     }
 
 

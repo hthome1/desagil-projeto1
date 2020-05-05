@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button botaoMorse = findViewById(R.id.button2);
 
+
+
         botaoMorse.setOnClickListener((view) -> {
             mensagem.setText(mensagem.getText().toString()+".");
 

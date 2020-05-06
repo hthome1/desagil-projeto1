@@ -13,6 +13,7 @@ public class Translator {
     private HashMap<Character, Node> map;
     private char[] chars;
     private Node arvore;
+    private int contador = 0;
 
 
     // Você deve mudar o recheio do construtor,
@@ -43,11 +44,19 @@ public class Translator {
         for(char c : code.toCharArray()) {
             if (c == '.'){
                 arvore = arvore.getLeft();
+                contador +=1;
             }else{
                 arvore = arvore.getRight();
+                contador += 1;
             }
         }
-        return arvore.getValue();
+        char valor = arvore.getValue();
+        while(contador>0){
+            arvore = arvore.getParent();
+            contador -= 1;
+        }
+
+        return valor;
     }
 
 

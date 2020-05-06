@@ -20,6 +20,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
     long then = 0;
     long now = 0;
+    long temp_final = 0;
     int uniTempo = 500;
     String texto = "";
 //    long endTime = 0;
@@ -79,29 +80,25 @@ public class MainActivity extends AppCompatActivity {
                     if((now - then) < uniTempo){
                         mensagem.setText(mensagem.getText().toString()+".");
                         texto += ".";
-//                        try {
-//                            TimeUnit.MILLISECONDS.sleep(3000);
-//                            long endTime = System.currentTimeMillis();
-//                            if (endTime-now>=3000){
-//                                String trad = Character.toString(translator.morseToChar(mensagem.getText().toString()));
-//                                mensagem2.setText(mensagem2.getText().toString()+trad);
-//                            }
-//                        } catch (InterruptedException e) {
-//                            e.printStackTrace();
-//                        }
+//
                     }
-                    else if((System.currentTimeMillis() - then) > uniTempo && (System.currentTimeMillis() - then) < uniTempo*3 ){
+                    else if((now - then) > uniTempo && (now - then) < uniTempo*3 ){
                         mensagem.setText(mensagem.getText().toString()+"-");
                         texto += "-";
                     }
-
+                    else if((now-then)>=uniTempo*10){
+                        mensagem2.setText("Mensagem: ");
+                    }
                 }
 
-
-
-
-
-
+//                else if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+//                    temp_final = System.currentTimeMillis();
+//                    if(temp_final-now >= uniTempo*7){
+//                        String trad = Character.toString(translator.morseToChar(mensagem.getText().toString()));
+//                        mensagem2.setText(mensagem2.getText().toString() + trad);
+//                        mensagem.setText("");
+//                    }
+//                }
 
 
                 return false;
@@ -111,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         botaoTrad.setOnClickListener((view) -> {
             String trad = Character.toString(translator.morseToChar(mensagem.getText().toString()));
             mensagem2.setText(mensagem2.getText().toString() + trad);
-            mensagem.setText(null);
+            mensagem.setText("");
         });
 
 

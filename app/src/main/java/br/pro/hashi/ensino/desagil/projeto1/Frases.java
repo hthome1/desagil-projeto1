@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-import android.os.Bundle;
+
 
 public class Frases extends AppCompatActivity {
 

@@ -13,9 +13,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-import android.os.Bundle;
-
-
 
 public class MainActivity extends AppCompatActivity {
     long then = 0;
@@ -36,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent frases = new Intent(MainActivity.this, Frases.class);
                 startActivity(frases);
+            }
+        });
+
+        Button botaoDicionario = findViewById(R.id.button8);
+        botaoDicionario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent dicio = new Intent(MainActivity.this, Dicionario.class);
+                startActivity(dicio);
             }
         });
 
@@ -86,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                         mensagem.setText(mensagem.getText().toString()+"-");
                         texto += "-";
                     }
-                    else if((now-then)>=uniTempo*10){
+                    else if((now-then)>=uniTempo*5){
                         mensagem2.setText("Mensagem: ");
                     }
                 }

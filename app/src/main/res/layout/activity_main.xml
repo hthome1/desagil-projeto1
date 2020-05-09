@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:weightSum="1">
 
 
     <TextView
@@ -36,24 +37,49 @@
         android:layout_height="105dp"
         android:layout_marginBottom="10dp"
         android:text=".    /    -"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
 
     <Button
         android:id="@+id/traduzir"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
+        android:layout_marginStart="110dp"
         android:layout_marginBottom="10dp"
         android:text="TRADUZIR"
         android:textSize="25sp" />
 
-    <Button
-        android:id="@+id/button3"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Frases prontas"
-        android:textSize="18sp" />
-    <!--        android:layout_marginRight="220dp"-->
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="Frases Prontas"
+            android:layout_marginStart="5dp"/>
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dicionário"
+            android:layout_marginEnd="5dp"/>
+    </LinearLayout>
+
+    <!--        <Button-->
+<!--        android:id="@+id/button3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Frases prontas"-->
+<!--        android:textSize="18sp" />-->
+
 
 
 </LinearLayout>

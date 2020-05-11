@@ -7,6 +7,7 @@ package br.pro.hashi.ensino.desagil.projeto1;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class Translator {
     private Node root;
@@ -22,8 +23,8 @@ public class Translator {
         map = new HashMap<Character, Node>();
         chars = new char[]{' ', 'e', 't', 'i', 'a', 'n', 'm', 's', 'u', 'r', 'w', 'd', 'k', 'g', 'o', 'h',
                             'v', 'f',' ', 'l', ' ', 'p', 'j', 'b', 'x', 'c', 'y', 'z', 'q', ' ', ' ',
-                            '5', '4', ' ', '3', ' ', ' ', ' ', '2', ' ', ' ', '+', ' ', ' ', ' ', ' ', '1',
-                            '6', '=', '/', ' ', ' ', ' ', ' ', ' ', '7', ' ', ' ', ' ', '8', ' ', '9', '0'};
+                            '5', '4', ' ', '3', ' ' , ' ' , ' ', '2', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '1',
+                            '6', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '7', ' ', ' ', ' ', '8', ' ', '9', '0'};
         arvore = vecToTree(chars,root,null,map,0);
     }
     public Node vecToTree(char[] array, Node raiz, Node parent, HashMap<Character,Node> map, int i){
@@ -63,7 +64,20 @@ public class Translator {
     // Você deve mudar o recheio deste método,
     // de acordo com os requisitos do projeto.
     private String charToMorse(Node node) {
-        return " ";
+        String resultado = "";
+        Node parent;
+        parent = node.getParent();
+        while (parent != null){
+            if(parent.getLeft() == node){
+                resultado =  "." + resultado;
+            }else {
+                resultado = "-" + resultado;
+            }
+            node = node.getParent();
+            parent = parent.getParent();
+
+        }
+        return resultado;
     }
 
 
@@ -76,6 +90,33 @@ public class Translator {
     // Você deve mudar o recheio deste método,
     // de acordo com os requisitos do projeto.
     public LinkedList<String> getCodes() {
-        return new LinkedList<>();
+        Queue<Node> queue = new LinkedList<>();
+        LinkedList<String> lista_resposta = new LinkedList<>();
+
+        queue.add(arvore);
+
+        while (!queue.isEmpty()) {
+            Node node = queue.element();
+
+            Node left = node.getLeft();
+            Node right = node.getRight();
+
+
+            if (left != null) {
+                queue.add(left);
+            }
+            if (right != null) {
+                queue.add(right);
+            }
+            queue.remove();
+            if (node.getValue() != ' '){
+                lista_resposta.add(charToMorse(node));
+            }
+
+
+            //System.out.println(distance + " " + node.getValue());
+        }
+        System.out.println(lista_resposta);
+        return lista_resposta;
     }
 }

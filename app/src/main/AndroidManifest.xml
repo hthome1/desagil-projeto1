@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dicionario"></activity>
+        <activity android:name=".SMSActivity"></activity>
+        <activity android:name=".Sms" />
+        <activity android:name=".Dicionario" />
         <activity android:name=".Frases" />
         <activity android:name=".MainActivity">
             <intent-filter>

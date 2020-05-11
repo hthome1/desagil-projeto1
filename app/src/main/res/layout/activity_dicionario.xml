@@ -7,9 +7,14 @@
     android:orientation="vertical"
     tools:context=".Dicionario">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="278dp"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
+        android:layout_height="52dp"
+        android:text="            Dicionário"
+        android:textSize="40dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

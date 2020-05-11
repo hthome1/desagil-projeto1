@@ -53,27 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView mensagem2 = findViewById(R.id.textView4);
 
-//        botaoMorse.setOnClickListener((view) -> {
-//            mensagem.setText(mensagem.getText().toString()+".");
-//
-//        });
-//
-//        botaoMorse.setOnLongClickListener((view) -> {
-//            mensagem.setText(mensagem.getText().toString()+"-");
-//
-//            return true;
-//        });
-//
         Translator translator = new Translator();
-//
-//
-//        botaoTrad.setOnClickListener((view) -> {
-//            String trad = Character.toString(translator.morseToChar(mensagem.getText().toString()));
-//            mensagem2.setText("Mensagem: "+trad);
-
-//        long tempo_1 = 0;
-//        long tempo_2 = 0;
-
 
         botaoMorse.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -86,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
                     if((now - then) < uniTempo){
                         mensagem.setText(mensagem.getText().toString()+".");
                         texto += ".";
-//
                     }
                     else if((now - then) > uniTempo && (now - then) < uniTempo*3 ){
                         mensagem.setText(mensagem.getText().toString()+"-");
@@ -96,16 +75,6 @@ public class MainActivity extends AppCompatActivity {
                         mensagem2.setText("Mensagem: ");
                     }
                 }
-
-//                else if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
-//                    temp_final = System.currentTimeMillis();
-//                    if(temp_final-now >= uniTempo*7){
-//                        String trad = Character.toString(translator.morseToChar(mensagem.getText().toString()));
-//                        mensagem2.setText(mensagem2.getText().toString() + trad);
-//                        mensagem.setText("");
-//                    }
-//                }
-
 
                 return false;
             }

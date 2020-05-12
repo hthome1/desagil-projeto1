@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:text="            Enviar Mensagem"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/mensagem_pronta"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginStart="10dp"
+        android:text=""
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/numerotrad"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text=""
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/telefone"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:layout_marginStart="10dp"
+        android:hint="Número"
+        android:paddingBottom="10dp"
+        android:textSize="23sp" />
+
+    <Button
+        android:id="@+id/botaoMorse2"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginBottom="10dp"
+        android:text=".    /    -"
+        android:textSize="30sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/traduzir2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="Traduzir"
+            android:layout_marginStart="5dp"/>
+
+        <Button
+            android:id="@+id/botaoenviar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Enviar"
+            android:layout_marginEnd="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

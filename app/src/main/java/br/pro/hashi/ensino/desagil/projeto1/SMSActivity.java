@@ -97,7 +97,7 @@ public class SMSActivity extends AppCompatActivity {
             String message = mensagem_pronta.getText().toString();
 
             if (message.isEmpty()) {
-                showToast("Mensagem inválida!");
+                showToast("Mensagem inválida! ");
                 return;
             }
 

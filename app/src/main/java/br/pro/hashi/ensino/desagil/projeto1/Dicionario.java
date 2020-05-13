@@ -3,6 +3,8 @@ package br.pro.hashi.ensino.desagil.projeto1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -23,7 +25,10 @@ public class Dicionario extends AppCompatActivity {
             String elemento = letra + " : " + translator.charToMorse(lista);
             resultado.add(elemento);
         }
-        System.out.println(resultado);
+
+        ListView lista = (ListView) findViewById(R.id.listView);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, resultado);
+        lista.setAdapter(arrayAdapter);
     }
 
 }

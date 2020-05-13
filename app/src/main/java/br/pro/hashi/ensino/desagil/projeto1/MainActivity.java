@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     long temp_final = 0;
     int uniTempo = 500;
     String texto = "";
+    String mensagem3 = "";
 //    long endTime = 0;
     @SuppressLint({"SetTextI18n", "ClickableViewAccessibility"})
     @Override
@@ -79,6 +80,20 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        mensagem3 = mensagem2.getText().toString();
+
+        Button enviar1 = findViewById(R.id.enviar);
+        enviar1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent envio = new Intent(MainActivity.this, SMSActivity.class);
+                envio.putExtra("msg", mensagem2.getText().toString());
+                startActivity(envio);
+            }
+        });
+
+
 
         botaoTrad.setOnClickListener((view) -> {
             String trad = Character.toString(translator.morseToChar(mensagem.getText().toString()));

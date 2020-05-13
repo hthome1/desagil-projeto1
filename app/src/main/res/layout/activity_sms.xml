@@ -8,33 +8,39 @@
     tools:context=".MainActivity"
     android:weightSum="1">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:text="            Enviar Mensagem"
+        android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/mensagem_pronta"
         android:layout_width="match_parent"
-        android:layout_height="47dp"
-        android:text="                     Escreva sua mensagem em código Morse:" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="208dp"
-        android:text="Mensagem: "
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="116dp"
-        android:layout_marginStart="20dp"
-        android:inputType="none"
+        android:layout_height="140dp"
+        android:layout_marginStart="10dp"
         android:text=""
         android:textSize="30sp" />
 
+    <TextView
+        android:id="@+id/numerotrad"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text=""
+        android:textSize="30sp" />
 
+    <TextView
+        android:id="@+id/telefone"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:layout_marginStart="10dp"
+        android:hint="Número"
+        android:paddingBottom="10dp"
+        android:textSize="23sp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/botaoMorse2"
         android:layout_width="match_parent"
         android:layout_height="105dp"
         android:layout_marginBottom="10dp"
@@ -43,56 +49,27 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"/>
 
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="142dp"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/traduzir"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="TRADUZIR"
-            android:textSize="25sp" />
-
-        <Button
-            android:id="@+id/enviar"
-            android:layout_width="197dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="ENVIAR"
-            android:textSize="25sp"
-            android:layout_marginEnd="10dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button3"
+            android:id="@+id/traduzir2"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:text="Frases Prontas"
+            android:text="Traduzir"
             android:layout_marginStart="5dp"/>
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/botaoenviar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Dicionário"
+            android:text="Enviar"
             android:layout_marginEnd="5dp"/>
     </LinearLayout>
-
-
 
 </LinearLayout>
